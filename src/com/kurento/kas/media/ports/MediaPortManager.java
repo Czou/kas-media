@@ -19,13 +19,13 @@ package com.kurento.kas.media.ports;
 
 public class MediaPortManager {
 
-	public int takeAudioLocalPort(){
+	public static int takeAudioLocalPort(){
 		return takeAudioLocalPort(-1);
 	}
 	public static native int takeAudioLocalPort(int audioPort);
 	public static native void releaseAudioLocalPort();
 	
-	public int takeVideoLocalPort() {
+	public static int takeVideoLocalPort() {
 		return takeVideoLocalPort(-1);
 	}
 	public static native int takeVideoLocalPort(int videoPort);
