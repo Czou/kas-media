@@ -30,7 +30,7 @@ public class MediaRx {
 	public static native int stopAudioRx();
 	
 	static {
-		System.loadLibrary("android-media");
+		System.loadLibrary("kas-media-native");
 	}
 	
 }

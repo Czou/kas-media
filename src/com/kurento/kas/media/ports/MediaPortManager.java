@@ -32,7 +32,7 @@ public class MediaPortManager {
 	public static native void releaseVideoLocalPort();
 	
 	static {
-		System.loadLibrary("android-media");
+		System.loadLibrary("kas-media-native");
 	}
 	
 }

@@ -66,7 +66,7 @@ public class MediaTx {
 	public static native int finishAudio();
 
 	static {
-		System.loadLibrary("android-media");
+		System.loadLibrary("kas-media-native");
 	}
 
 }
