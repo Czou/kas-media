@@ -30,13 +30,14 @@ public class MediaTx {
 
 	// VIDEO
 	private static native int initVideo(String outfile, int width, int height,
-			int frame_rate, int bit_rate, int gop_size, int codecId,
-			int payload_type, String presetFile);
+			int frame_rate_num, int frame_rate_den, int bit_rate, int gop_size,
+			int codecId, int payload_type, String presetFile);
 
 	public static int initVideo(VideoInfoTx videoInfoTx) {
 		return initVideo(videoInfoTx.getOut(), videoInfoTx.getVideoProfile()
 				.getWidth(), videoInfoTx.getVideoProfile().getHeight(),
-				videoInfoTx.getVideoProfile().getFrameRate(), videoInfoTx
+				videoInfoTx.getVideoProfile().getFrameRateNum(), videoInfoTx
+						.getVideoProfile().getFrameRateDen(), videoInfoTx
 						.getVideoProfile().getBitRate(), videoInfoTx
 						.getVideoProfile().getGopSize(), videoInfoTx
 						.getVideoProfile().getVideoCodecType().getCodecID(),

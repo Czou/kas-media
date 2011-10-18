@@ -29,7 +29,8 @@ public class VideoProfile {
 	private VideoCodecType videoCodecType;
 	private int width;
 	private int height;
-	private int frameRate;
+	private int frameRateNum;
+	private int frameRateDen;
 	private int bitRate;
 	private int gopSize;
 	private String description;
@@ -38,8 +39,12 @@ public class VideoProfile {
 		return videoCodecType;
 	}
 
-	public int getFrameRate() {
-		return frameRate;
+	public int getFrameRateNum() {
+		return frameRateNum;
+	}
+
+	public int getFrameRateDen() {
+		return frameRateDen;
 	}
 
 	public int getBitRate() {
@@ -70,8 +75,12 @@ public class VideoProfile {
 		this.height = height;
 	}
 
-	public void setFrameRate(int frameRate) {
-		this.frameRate = frameRate;
+	public void setFrameRateNum(int frameRateNum) {
+		this.frameRateNum = frameRateNum;
+	}
+
+	public void setFrameRateDen(int frameRateDen) {
+		this.frameRateDen = frameRateDen;
 	}
 
 	public void setBitRate(int bitRate) {
@@ -98,17 +107,20 @@ public class VideoProfile {
 		this.videoCodecType = videoCodecType;
 		this.width = DEFAULT_WIDTH;
 		this.height = DEFAULT_HEIGHT;
-		this.frameRate = DEFAULT_FRAME_RATE;
+		this.frameRateNum = DEFAULT_FRAME_RATE;
+		this.frameRateDen = 1;
 		this.gopSize = DEFAULT_GOP_SIZE;
 		this.bitRate = bitRate;
 	}
 
 	public VideoProfile(VideoCodecType videoCodecType, int width, int height,
-			int frameRate, int bitRate, int gopSize, String description) {
+			int frameRateNum, int frameRateDen, int bitRate, int gopSize,
+			String description) {
 		this.videoCodecType = videoCodecType;
 		this.width = width;
 		this.height = height;
-		this.frameRate = frameRate;
+		this.frameRateNum = frameRateNum;
+		this.frameRateDen = frameRateDen;
 		this.bitRate = bitRate;
 		this.gopSize = gopSize;
 		this.description = description;
